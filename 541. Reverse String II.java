@@ -1,3 +1,5 @@
+//Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string. Read this carefully 
+
 class Solution {
      public String reverseStr(String s, int k) {
         char[] arr = s.toCharArray();
