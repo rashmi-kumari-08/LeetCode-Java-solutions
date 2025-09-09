@@ -1,5 +1,5 @@
 
-//Optimal
+//another brut force
 class Solution {
     public int majorityElement(int[] nums) {
 
