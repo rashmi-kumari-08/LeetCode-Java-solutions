@@ -3,13 +3,15 @@
 //It does not matter what you leave beyond the returned k (hence they are underscores).
 class Solution {
     public int removeDuplicates(int[] nums) {
-       int count =1;
-        for(int i=0;i<nums.length-1;i++){
-                if(nums[i]!=nums[i+1]){
-                    nums[count]=nums[i+1];
-                    count++;
-                }
+        int n = nums.length;
+        if (n == 0) return 0; // quick edge case
+
+        int i = 0; 
+        for (int j = 1; j < n; j++) {
+            if (nums[j] != nums[i]) {
+                nums[++i] = nums[j]; // pre-increment + assignment in one step
+            }
         }
-        return count;
-  }
+        return i + 1;
+    }
 }
